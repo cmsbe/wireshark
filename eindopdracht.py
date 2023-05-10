@@ -13,7 +13,7 @@ class App(tk.Tk):
         self.frames = [] #wij maken een lijst voor de frames
         self.create_frame("BTW berekening", self.calculate_btw, "Voer een bedrag in:") #label voor btw berekening, gemaakt door Eyobil
         self.create_frame("Reistijd berekening", self.calculate_reistijd, "Voer de afstand in (km):", "Voer de snelheid in (km/h):") #label voor reistijd berekening, gemaakt door David
-        self.create_frame("Vierkant berekening", self.calculate_vierkant, "Voer de lengte in (m):", "Voer de breedte in (m):") #label voor vierkant meter berekening, gemaakt door Musabe
+        self.create_frame("oppervlakte berekening", self.calculate_opervlakte, "Voer de lengte in (m):", "Voer de breedte in (m):") #label voor vierkant meter berekening, gemaakt door Musabe
         self.create_frame("Getal raden", self.guess_number, "Voer een minimumwaarde in:", "Voer een maximumwaarde in:") #label voor willeukeurig getal, gemaakt door Serhat
         
     #wij maken een def aan om de frames aan te maken, wij geven hem create_frame als naam
@@ -53,12 +53,11 @@ class App(tk.Tk):
         self.result(reistijd, "Reistijd", "uur")
         
     #def om de oppervlakte te berekenen
-    def calculate_vierkant(self, entry1, entry2):
+    def calculate_oopervlakte(self, entry1, entry2):
         lengte = float(entry1.get())
         breedte = float(entry2.get())
-        omtrek = 2 * (lengte + breedte)
         oppervlakte = lengte * breedte
-        self.result(omtrek, "Omtrek", "\nOppervlakte", oppervlakte)
+        self.result(oppervlakte, "Oppervlakte")
 
     def guess_number(self, entry1, entry2):
         min_value = int(entry1.get())
