@@ -53,7 +53,7 @@ class App(tk.Tk):
         self.result(reistijd, "Reistijd", "uur")
 
     #def om de oppervlakte te berekenen
-    def calculate_vierkant(self, entry1, entry2):
+    def calculate_oppervlak(self, entry1, entry2):
         lengte = float(entry1.get())
         breedte = float(entry2.get())
         omtrek = 2 * (lengte + breedte)
